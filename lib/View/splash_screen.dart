@@ -16,6 +16,14 @@ late final AnimationController controller = AnimationController(
     vsync: this,
   duration: Duration(seconds: 3),
 )..repeat();
+
+
+@override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+    controller.dispose();
+  }
   @override
   void initState() {
     // TODO: implement initState
